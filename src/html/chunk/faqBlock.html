@@ -1,0 +1,20 @@
+<section class=" faq-block">
+  <div class="container">
+    <div class="faq-container">
+      <img class="back opacity" src="img/background.png" />
+      <img class="back" src="img/faq-back.svg" />
+      <div class="header">
+        <h2 class="second__h2">faq</h2>
+        <img class="svg-renew" src="img/otvechaem.svg" />
+      </div>
+      <div class="qwestions">
+        @@loop("../components/open-faq-item.html", "../../data/faq.json")
+      </div>
+    </div>
+    <div class="play__container">
+      <div class="play">
+        <img class="play__image" src="img/message.svg" />
+      </div>
+    </div>
+  </div>
+</section>

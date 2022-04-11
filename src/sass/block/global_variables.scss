@@ -1,0 +1,55 @@
+// COLORS
+$background-green: linear-gradient(180deg, #11ad3d 0%, #035222 100%);
+$light-blue: #69c0ff;
+$light-blue-dashed: rgba(105, 192, 255, 0.57);
+$link-green-color: rgba(34, 230, 17, 0.71);
+
+// BORDERS
+$border-blue: 1px solid $light-blue;
+$border-green: 1px solid #1b9e0f;
+$blur-border-blue: 3px solid $light-blue-dashed;
+
+// FONTS
+$mul: "Mulish", sans-serif;
+$play: "Play", sans-serif;
+
+// PATTERNS
+@mixin font($weight-value, $size-value, $height-value) {
+  font-weight: $weight-value;
+  font-size: $size-value;
+  line-height: $height-value;
+}
+
+@mixin button(
+  $width,
+  $backgorund: none,
+  $radius,
+  $border,
+  $filter: none,
+  $height: 70px
+) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  height: $height;
+  max-width: $width;
+  width: 100%;
+  border: $border;
+  filter: $filter;
+  border-radius: $radius;
+  background: $backgorund;
+  @include font(700, 1.8rem, 20.83px);
+}
+
+@mixin absoluteCenter(
+  $translate: (
+    -50%,
+    -50%,
+  )
+) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate($translate);
+}

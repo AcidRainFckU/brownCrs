@@ -1,0 +1,175 @@
+.earnings {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .earnings-header {
+      width: 100%;
+      margin-bottom: 13px;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        margin-bottom: 7px;
+      }
+      & > picture {
+        text-align: center;
+        margin: 7px auto 0;
+      }
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+        h2 {
+          text-align: start;
+        }
+        & > picture {
+          align-self: flex-end;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        justify-content: space-between;
+        h2 {
+          max-width: 506px;
+        }
+        & > picture {
+          margin: 0;
+          margin-left: auto;
+        }
+      }
+      @media screen and (min-width: 1210px) {
+        margin-bottom: 50px;
+      }
+    }
+    .earnings__blocks {
+      width: 100%;
+      .earnings__block {
+        background: center / cover no-repeat
+          url(../img/first-table-first-back.svg);
+        min-height: 190px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0 20px 20px;
+        position: relative;
+
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        p {
+          @include font(400, 1.8rem, 27px);
+        }
+        .blue {
+          font-weight: 800;
+        }
+        &:not(:nth-child(1)) {
+          p {
+            @include font(500, 1.8rem, 27px);
+            span {
+              @include font(700, 2.2rem, 33px);
+            }
+          }
+          p:not(:nth-child(3)) {
+            @include font(300, 1.5rem, 22px);
+            color: rgba(255, 255, 255, 0.8);
+          }
+          p:nth-child(3) {
+            margin: 23px 0;
+          }
+        }
+        img {
+          position: absolute;
+          &.medal {
+            top: 0;
+            right: -27px;
+            width: 117px;
+            height: 82px;
+          }
+          &:not(.medal) {
+            display: none;
+          }
+        }
+      }
+      @media screen and (min-width: 768px) {
+        display: flex;
+
+        .earnings__block {
+          padding: 40px 0 40px 10px;
+
+          min-height: 246px;
+          &:not(:last-child) {
+            margin-bottom: 0;
+          }
+          &:nth-child(2) {
+            margin: 0 30px;
+          }
+          &:not(:nth-child(1)) {
+            p:nth-child(3) {
+              margin: 31px 0;
+            }
+          }
+          img {
+            &.medal {
+              top: 0;
+              right: -27px;
+              width: 132px;
+              height: 94px;
+            }
+          }
+        }
+      }
+      @media screen and (min-width: 1210px) {
+        .earnings__block {
+          padding: 30px 44px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          p {
+            @include font(400, 2rem, 30px);
+            max-width: 243px;
+            margin: auto;
+          }
+          &:not(:first-child) {
+            p {
+              @include font(500, 2rem, 30px);
+              margin: 0;
+
+              span {
+                @include font(700, 2.5rem, 38px);
+              }
+            }
+            p:not(:nth-child(3)) {
+              @include font(300, 1.6rem, 24px);
+            }
+            p:nth-child(3) {
+              margin: 35px 0;
+              @include font(300, 2rem, 30px);
+            }
+          }
+          img {
+            &.medal {
+              top: 0;
+              right: -27px;
+              width: 177px;
+              height: 130px;
+            }
+            &:not(.medal) {
+              display: block;
+              top: 13px;
+              right: 30px;
+            }
+            &.dengi2 {
+              top: 12px;
+              right: 11px;
+            }
+          }
+          &:first-child{
+            p{
+              margin-right: auto;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
