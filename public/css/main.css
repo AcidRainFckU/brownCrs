@@ -414,13 +414,13 @@ section {
 
 .open-block {
   overflow: hidden;
-  -webkit-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
 }
 
 .open-block .open-block-content {
   overflow: hidden;
+  -webkit-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
   height: 0;
 }
 
@@ -431,16 +431,10 @@ section {
 }
 
 .open-block.opened .open-block-content {
-  -webkit-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
   height: 100%;
 }
 
 .open-block.opened .text {
-  -webkit-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
   height: 100%;
   padding: 15px 0 !important;
 }
@@ -5353,7 +5347,7 @@ section {
   -webkit-filter: blur(78px);
   filter: blur(78px);
   border-radius: 50%;
-  display: block;
+  display: none;
 }
 
 .header-block .container .offer .header-block-image__wrapper .header-block-image__container .header-block-image {
@@ -5779,7 +5773,6 @@ section {
 }
 
 .program .container .program__about {
-  background: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5791,6 +5784,7 @@ section {
 }
 
 .program .container .program__about li {
+  background: #000000;
   position: relative;
   padding: 14px 0 14px 50px;
   border: 1px solid #294355;
@@ -6292,11 +6286,14 @@ section {
 
   .earnings .container .earnings-header h2 {
     text-align: start;
+    white-space: nowrap;
+    max-width: 377px;
   }
 
   .earnings .container .earnings-header > picture {
     -ms-flex-item-align: end;
     align-self: flex-end;
+    width: 100%;
   }
 
   .earnings .container .earnings__blocks {
@@ -6775,8 +6772,14 @@ section {
   }
 
   .earnings .container .earnings-header > picture {
-    margin: 0;
+    margin-right: 0;
     margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end;
   }
 
   .header-block .container .offer {
@@ -7050,16 +7053,18 @@ section {
 
   .earnings .container .earnings__blocks .earnings__block img:not(.medal) {
     display: block;
-    top: 13px;
-    right: 30px;
+    top: -23px;
+    right: -34px;
+    width: 175px;
   }
 
-  .earnings .container .earnings__blocks .earnings__block img.dengi2 {
-    top: 12px;
-    right: 11px;
+  .earnings .container .earnings__blocks .earnings__block img:not(.medal).dengi2 {
+    width: 166px;
+    top: -21px;
+    right: -22px;
   }
 
-  .earnings .container .earnings__blocks .earnings__block:first-child p {
+  .earnings .container .earnings__blocks .earnings__block img:first-child p {
     margin-right: auto;
     margin-left: 0;
   }

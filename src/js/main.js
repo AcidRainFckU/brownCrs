@@ -33,10 +33,6 @@ reviewButton.addEventListener("click", () => {
   }
 });
 
-// WOW
-
-new WOW().init();
-
 // ОТКРЫТИЕ БЛОКОВ
 const openBlock = document.querySelectorAll(".open-block");
 const title = document.querySelectorAll(".title");

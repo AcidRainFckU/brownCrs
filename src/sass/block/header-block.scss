@@ -129,7 +129,7 @@
             opacity: 1;
             z-index: 6;
           }
-          .header-block-image-opacity-back{
+          .header-block-image-opacity-back {
             position: absolute;
             top: -43px;
             width: 465px;
@@ -139,7 +139,7 @@
             z-index: 4;
             filter: blur(78px);
             border-radius: 50%;
-            display:block;
+            display: none;
           }
           .header-block-image {
             position: absolute;
@@ -188,7 +188,7 @@
               bottom: -101px;
               filter: blur(23px);
             }
-            .header-block-image-opacity-back{
+            .header-block-image-opacity-back {
               display: block;
             }
             .header-block-image {
@@ -358,7 +358,7 @@
             &:nth-child(4) {
               border-radius: 0px 10px 10px 0px;
               padding-left: 26px;
-              padding-right:50px;
+              padding-right: 50px;
             }
           }
         }

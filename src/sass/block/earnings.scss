@@ -19,9 +19,12 @@
         flex-direction: row;
         h2 {
           text-align: start;
+          white-space: nowrap;
+          max-width: 377px;
         }
         & > picture {
           align-self: flex-end;
+          width: 100%;
         }
       }
       @media screen and (min-width: 992px) {
@@ -30,8 +33,10 @@
           max-width: 506px;
         }
         & > picture {
-          margin: 0;
+          margin-right: 0;
           margin-left: auto;
+          display: flex;
+          justify-content: end;
         }
       }
       @media screen and (min-width: 1210px) {
@@ -154,18 +159,20 @@
             }
             &:not(.medal) {
               display: block;
-              top: 13px;
-              right: 30px;
+              top: -23px;
+              right: -34px;
+              width: 175px;
+              &.dengi2 {
+                width: 166px;
+                top: -21px;
+                right: -22px;
+              }
             }
-            &.dengi2 {
-              top: 12px;
-              right: 11px;
-            }
-          }
-          &:first-child{
-            p{
-              margin-right: auto;
-              margin-left: 0;
+            &:first-child {
+              p {
+                margin-right: auto;
+                margin-left: 0;
+              }
             }
           }
         }
