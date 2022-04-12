@@ -1,0 +1,183 @@
+.about-creater {
+  position: relative;
+  .prof__back-right {
+    display: none;
+    top: -400px;
+    right: -273px;
+    z-index: 1;
+  }
+  .container {
+    position: relative;
+    z-index: 98;
+    transition: none;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .content-photo__wrapper {
+      margin-left: auto;
+      margin-right: auto;
+      height: 229px;
+      .content-photo {
+        top: -88px;
+      }
+    }
+    ul {
+      margin: 0 auto 30px;
+
+      li {
+        padding-left: 24px;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+        max-width: 336px;
+        width: 100%;
+        h4 {
+          text-align: start;
+          @include font(700, 2.2rem, 33px);
+          text-transform: none;
+          margin-bottom: 10px;
+        }
+        position: relative;
+        .dot {
+          top: 12px;
+        }
+        .dot-line {
+          top: 45px;
+          bottom: -5px;
+        }
+      }
+    }
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 366px 379px;
+      grid-template-rows: 143px 375px 593px;
+      h2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+      }
+      .content-photo__wrapper {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        max-width: 379px;
+        width: 100%;
+        height: 968px;
+        margin-bottom: 0;
+        .content-photo {
+          width: unset;
+          left: -55px;
+          height: 968px;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+      }
+      ul {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        li {
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+          max-width: 348px;
+          @include font(400, 1.6rem, 26px);
+          .dot-line {
+            bottom: 0;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 992px) {
+      grid-template-columns: 482px 470px;
+      grid-template-rows: 143px 358px 459px;
+      h2 {
+        max-width: 569px;
+      }
+      .content-photo__wrapper {
+        max-width: 470px;
+        width: 100%;
+        height: 817px;
+        margin-bottom: 0;
+        .content-photo {
+          width: unset;
+          left: -55px;
+          height: 835px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      ul {
+        li {
+          max-width: 414px;
+          @include font(400, 1.6rem, 26px);
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0 0 80px 19.5px;
+    .prof__back-right {
+      display: block;
+    }
+    .container {
+      max-width: 746px;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    padding: 0 19.5px 80px;
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media screen and (min-width: 1210px) {
+    padding: 0 19.5px 140px;
+    .container {
+      justify-items: unset;
+      align-items: unset;
+      max-width: 1169px;
+      grid-template-columns: 699px 470px;
+      grid-template-rows: 156px 312px 362px;
+      h2 {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        text-align: start;
+        max-width: 656px;
+        grid-row-end: 1;
+        line-height: 56px;
+        margin-bottom: 44px;
+      }
+      .content-photo__wrapper {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        .content-photo {
+          width: 470px;
+          height: 817px;
+        }
+      }
+      ul {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        li {
+          max-width: 673px;
+          @include font(400, 1.8rem, 29px);
+          &:not(:last-child) {
+            margin-bottom: 34px;
+          }
+        }
+      }
+    }
+  }
+}

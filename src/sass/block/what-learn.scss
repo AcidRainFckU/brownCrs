@@ -1,0 +1,85 @@
+.what-learn {
+  position: relative;
+  overflow: hidden;
+  .learn-back {
+    @include absoluteCenter((-50%, -50%));
+    z-index: 50;
+    opacity: 8%;
+    width: 1000px;
+    top: 35%;
+    left: 58%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    display: none;
+  }
+  .container {
+    max-width: 375px;
+    padding-right: 7px;
+    padding-left: 20px;
+    position: relative;
+    z-index: 90;
+    h2 {
+      font-size: 3.5rem;
+      text-align: start;
+    }
+    ul {
+      margin-top: 40px;
+      li {
+        padding-left: 40px;
+        position: relative;
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+        h4 {
+          text-align: start;
+          margin-bottom: 15px;
+          text-transform: none;
+        }
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        p {
+          position: relative;
+        }
+        .dot-line {
+          top: 60px;
+          left: 13px;
+          bottom: 20px;
+        }
+      }
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 727px;
+      padding-right: 0;
+      padding-left: 0;
+      ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 342.5px);
+        row-gap: 30px;
+        justify-content: space-between;
+        li {
+          &:not(:last-child) {
+            margin-bottom: 0;
+          }
+          p {
+            @include font(400, 1.6rem, 24px);
+          }
+          .dot-line {
+            top: 60px;
+            left: 13px;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 1210px) {
+      max-width: 1169px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .learn-back {
+      display: block;
+    }
+  }
+}

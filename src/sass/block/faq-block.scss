@@ -1,0 +1,115 @@
+.faq-block {
+  padding: 0 19.5px;
+
+  .container {
+    max-width: 970px;
+    .faq-container {
+      overflow: hidden;
+      padding: 50px 20px;
+      border-radius: 34.63px;
+      position: relative;
+      background: center / cover no-repeat url(../img/faq-back.svg),
+        center / cover no-repeat url(../img/faq-faq-fuck.png);
+
+      z-index: 40;
+      .back {
+        position: absolute;
+        z-index: 50;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+      }
+      .header {
+        position: relative;
+        z-index: 90;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 35px;
+        picture {
+          display: flex;
+          align-items: center;
+        }
+        @media screen and (min-width: 768px) {
+          h2 {
+            margin-bottom: 0 !important;
+          }
+        }
+      }
+      .qwestions {
+        position: relative;
+        z-index: 90;
+        .faq-open-block {
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+          .title {
+            padding: 0px;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+          }
+          .text {
+            padding-right: 40px;
+            padding-left: 10px;
+            @include font(300, 1.6rem, 24px);
+          }
+        }
+      }
+    }
+    .play__container {
+      transform-origin: center;
+      width: 99px;
+      margin-left: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      z-index: 100;
+      bottom: 73px;
+      right: 9px;
+      position: fixed;
+      .play {
+        transform-origin: 50% 50%;
+        transform: rotate(0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        picture {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .play__image {
+            position: relative;
+            transform: rotate(0);
+            z-index: 99;
+          }
+        }
+        &::before {
+          transform-origin: center;
+          transition: transform 0.5s;
+          background: linear-gradient(
+            203.36deg,
+            #005a19 8.21%,
+            #005a19 9.02%,
+            rgba(0, 0, 0, 0.37) 42.79%,
+            #005a19 68.24%
+          );
+        }
+      }
+      @media screen and (min-width: 1470px) {
+      }
+      &:hover {
+        .play {
+          &::before {
+            transform-origin: center;
+
+            transform: translate(-50%, -50%) rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+}

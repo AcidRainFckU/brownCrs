@@ -1,0 +1,103 @@
+.studentBlock {
+  overflow: hidden;
+  padding: 50px 19.5px 155px;
+  .container {
+    position: relative;
+    max-width: 336px;
+    z-index: 2;
+    .sphere {
+      position: absolute;
+      @include absoluteCenter((-50%, -50%));
+      max-width: 1150px;
+      z-index: 1;
+    }
+    .student__wrapper {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      .student__image {
+        position: relative;
+        max-width: 253px;
+        max-height: 253px;
+        margin: auto;
+        margin-bottom: 20px;
+
+        img {
+          max-height: 253px;
+          position: relative;
+        }
+      }
+      picture {
+        display: flex;
+        align-items: center;
+        .best__text {
+          margin-bottom: 12px;
+        }
+        .good-result__text {
+          margin-left: auto;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        .student__image {
+          grid-column-start: 2;
+          grid-column-end: 2;
+          margin-bottom: -60px;
+        }
+        picture {
+          grid-column-start: 1;
+          grid-column-end: 1;
+          margin-right: 0px;
+          &:last-child {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            margin-left: -43px;
+          }
+        }
+      }
+      @media screen and (min-width: 992px) {
+        picture {
+          &:last-child {
+            margin-left: 0;
+          }
+        }
+      }
+      @media screen and (min-width: 1210px) {
+        picture {
+          &:last-child {
+            margin-left: -22px;
+          }
+        }
+      }
+    }
+    h3 {
+      font-family: $play;
+      @include font(700, 3.4rem, 49px);
+      text-align: center;
+      margin-top: 8px;
+      position: relative;
+      z-index: 2;
+      span {
+        color: #78c4fc;
+        display: block;
+        @media screen and (min-width: 768px) {
+          display: unset;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        margin-top: 31px;
+        @include font(700, 4rem, 56px);
+      }
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 727px;
+    }
+    @media screen and (min-width: 992px) {
+      max-width: 813px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    padding: 130px 19.5px 170px;
+  }
+}

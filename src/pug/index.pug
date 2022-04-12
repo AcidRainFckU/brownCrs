@@ -1,0 +1,15 @@
+extends layout/app
+
+block page 
+    include chunk/header
+
+    h1 Главная!!!
+    p.title Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea illo eligendi veritatis esse consequatur qui culpa totam, neque dicta voluptatum, placeat nesciunt aut sequi deleniti incidunt repellat expedita ducimus? Numquam.
+
+    img(src="img/useEffect.jpg")
+
+    ul.news 
+        each item in news 
+            li= item.name
+
+    include chunk/footer
